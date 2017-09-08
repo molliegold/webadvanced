@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Web Advanced</title>
+		<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+		<script type="text/javascript" src="../portfolio/js/jquery-3.2.0.min.js"></script>
+		<style>
+			body {
+				background-color: #BFA89E;
+			}
+
+			@font-face {
+    			font-family: alcu;
+    			src: url(font/Alcubierre.otf);
+			}
+
+			h1, h2 {
+				font-family: 'alcu';
+				text-align: center;
+				font-size: 18px;
+				letter-spacing: 3px;
+				margin-top: 20px;
+				color: #2d2d2d;
+			}
+
+			h2 {
+				font-size: 14px;
+				margin-top: 0;
+			}
+
+			h3 {
+				font-family: "alcu";
+				font-size: 130px;
+				margin: 0 30px 10px 0;
+				color: #2d2d2d;
+				width: 100px;
+				margin-top: 450px;
+				float: right;
+				text-align: center;
+				border-right: 3px solid white;
+				border-bottom: 3px solid white;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			#screen1 {
+				background-color: white;
+				position: absolute;
+				bottom: 5%;
+				right: 40%;
+				width: 10px;
+				height: 10px;
+			}
+
+			#descrip1 {
+				background-color: white;
+				position: absolute;
+				top: 15%;
+				right: 2%;
+				width: 10px;
+				height: 10px;
+			}
+
+			p {
+				display: none;
+				font-family: "alcu";
+				font-size: 14px;
+				letter-spacing: 2px;
+				line-height: 19px;
+				padding-top: 25px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			video {
+				display: none;
+				width: 780px;
+				height: auto;
+				margin: 80px 10px 0 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>MOLLIE GOLD</h1>
+			<h2>WEB ADVANCED - JAVASCRIPT</h2>
+			<a id="one" href="one/aliens.html"><h3>1</h3></a>
+			<h3>2</h3>
+			<h3>3</h3>
+			<h3>4</h3>
+		</div>
+
+		<div id="screen1">
+			<video autoplay loop>
+			<source src="mp4/et.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+		</div>
+		<div id="descrip1"><p>FIND A PIECE OF CONTENT WHOSE COPYRIGHT HAS EXPIRED, OR THAT IS UNDER A CREATIVE COMMONS LICENSE. USING YOUR KNOWLEDGE OF HTML, CSS, AND JAVASCRIPT, DESIGN AND PROGRAM A RE-PUBLISHING / REMIXING / RE-INTERPRETING OF YOUR CONTENT THAT COMMUNICATES YOUR PERSPECTIVE AND WHY YOU FIND THIS PIECE MEANINGFUL.</p></div>
+		
+	</body>
+
+	<script>
+		$(document).ready(function() {
+			$('#one').mouseover(function(){
+				 $('#screen1').animate({
+			    	width: ['800px', 'swing'],
+			    	height: ['600px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('video').css('display','block');
+
+				 $('#descrip1').animate({
+			    	width: ['450px', 'swing'],
+			    	height: ['200px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('p').css('display','block');
+			})
+
+			$('#one').mouseout(function(){
+				 $('#screen1').animate({
+			    	width: ['10px', 'swing'],
+			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('video').css('display','none');
+
+				 $('#descrip1').animate({
+			    	width: ['10px', 'swing'],
+			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('p').css('display','none');
+			})
+
+		});
+
+
+
+
+
+
+	</script>
+</html>
