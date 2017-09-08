@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<title>10,000 Galaxies</title>
+		<script type="text/javascript" src="../../portfolio/js/jquery-3.2.0.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet">
+
+		<script src="animsition.js"></script>
+		<link rel="stylesheet" href="css/animsition.css">
+		<style>
+		body{
+			background: url('img/background-copy.jpg');
+			background-repeat: repeat;
+			width: 1400px;
+			height: 100%vh;
+			overflow: hidden;
+		}
+
+		#poem {
+			width: 700px;
+			height: auto;
+			position: absolute;
+		}
+
+		#moon {
+			position: absolute;
+			margin-top: 100px;
+			margin-left: 800px;
+			width: 800px;
+			height: auto;
+			transition: transform 2s;
+		}
+
+		#moon:hover {
+			transform: translate(-80px, 70px);
+			cursor: pointer !important;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="animsition">
+			<img id="poem" src="img/poem.png">
+			<a href="hoomans.html" class="animsition-link"><img id="moon" src="img/moon.png"></a>
+		</div>
+	</body>
+
+	<script>
+	$(document).ready(function() {
+		$(".animsition").animsition({
+	    inClass: 'fade-in',
+	    outClass: 'fade-out',
+	    inDuration: 1500,
+	    outDuration: 1000,
+	    linkElement: '.animsition-link',
+	    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+	    loading: true,
+	    loadingParentElement: 'body', //animsition wrapper element
+	    loadingClass: 'animsition-loading',
+	    loadingInner: '', // e.g '<img src="loading.svg" />'
+	    timeout: false,
+	    timeoutCountdown: 5000,
+	    onLoadEvent: true,
+	    browser: [ 'animation-duration', '-webkit-animation-duration'],
+	    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+	    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+	    overlay : false,
+	    overlayClass : 'animsition-overlay-slide',
+	    overlayParentElement : 'body',
+	    transition: function(url){ window.location.href = url; }
+	  });
+		
+
+	});
+	</script>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<title>10,000 Galaxies</title>
+		<script type="text/javascript" src="../../portfolio/js/jquery-3.2.0.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet">
+
+		<script src="animsition.js"></script>
+		<link rel="stylesheet" href="css/animsition.css">
+
+		<style>
+		body{
+			background-color: black;
+			width: 1400px;
+			height: 100%vh;
+			overflow: hidden;
+		}
+
+		#pan {
+			background: url('img/stars.jpg');
+			height: 750px;
+			width: 1400px;
+		}
+
+		#enter {
+			position: absolute;
+			margin-top: 50vh;
+			margin-left: 46vw;
+			height: 30px;
+			width: 100px;
+			border: 2px solid black;
+			background-color: #191a46;
+			font-size: 18px;
+			font-family: 'Josefin Sans', sans-serif;
+			color: black;
+			letter-spacing: 2px;
+			padding: 15px 0 0 25px;
+			transition: all 300ms ease-in;
+		}
+
+		#enter:hover {
+			color: white;
+			border: 2px solid white;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="animsition">
+			<div id="pan">
+				<a class="animsition-link" href="space.html"><div id="enter">ENTER</div></a>
+			</div>
+		</div>
+	</body>
+
+	<script>
+	$(document).ready(function() {
+		$('#pan').mousemove(function(e){
+    	var mousePosX = (e.pageX/$(window).width())*100;
+    	$('#pan').css('background-position-x', mousePosX +'%');
+    	var mousePosY = (e.pageY/$(window).height())*100;
+		$('#pan').css('background-position-y', mousePosY +'%');
+		});
+
+  $(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 1000,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+
+	});
+	</script>
+
+</html>
