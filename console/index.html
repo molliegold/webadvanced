@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Console Pattern</title>
+		<script type="text/javascript" src="../js/jquery-3.2.0.min.js">
+		</script>
+		<style>
+			body {
+				background-color: #35633d;
+			}
+			div {
+				width: 300px;
+				height: 300px;
+				border-radius: 100%;
+				background-color: white;
+				opacity: 0.3;
+				margin: 15% 0 0 40%;
+				animation: bounce 2s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes bounce {
+				0% {
+					transform: scale (0.8);
+					opacity: 0.1;
+				}
+
+				25% {
+					transform: scale(1);
+					opacity: 0.3;
+				}
+
+				50% {
+					transform: scale(1.2);
+					opacity: 0.5;
+				}
+
+				75% {
+					transform: scale(1);
+					opacity: 0.3;
+				}
+
+				100% {
+					transform: scale (0.8);
+					opacity: 0.2;
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+
+	<script>
+	$(document).ready(function() {
+
+  		$('div').mouseover(function(){
+
+  			var random = Math.random()*1;
+  				emoji = ["🍑", "🍒", "🍆", "🍌"];
+  			// console.log(random);
+
+  			if(random >= 0.0 && random <= 0.2){
+		        console.log('🍑')
+		    }else if (random >= 0.21 && random <= 0.50) {
+		        console.log('🍒');
+		    }else if (random >= 0.51 && random <= 0.70) {
+		        console.log('🍆');
+		    }else if (random >= 0.71 && random <= 0.90) {
+		        console.log('🍌');
+		    }
+  		});
+
+	});
+	</script>
+</html>
