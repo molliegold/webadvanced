@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Console Pattern</title>
+		<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+	</head>
+	<body>
+	</body>
+
+	<script>
+	var arrowTimer = 0;
+
+	for (var i = 0; i < 50; i++){
+
+		setTimeout(function(){
+
+			var write = "";
+
+			for (var a = 0; a < 40; a++) {
+
+				var arrow = Math.random()*1;
+
+				if (arrow < 0.33) {
+					write += " → ";
+				}
+				else if (arrow > 0.33 && arrow < 0.66) {
+					write += " ← ";
+				}
+				else if (arrow > 0.66 && arrow < 0.99) {
+					write += " ↓ ";
+				}
+				else if (arrow >= 0.99 && arrow < 1.00) {
+					write += "end";
+				}
+			}
+
+			console.log(write);
+		}, arrowTimer);
+		arrowTimer += 150;
+	}
+
+
+	</script>
+</html>

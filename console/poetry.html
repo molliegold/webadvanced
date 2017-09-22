@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Console Pattern</title>
+		<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+	</head>
+	<body>
+	</body>
+
+	<script>
+	var poetTimer = 0;
+
+	for (var i = 0; i < 10; i++){
+
+		setTimeout(function(){
+
+			var write = "";
+
+
+			var wordArray = ['purple', 'clouds', 'love', 'smiles', 'greatness', 'can', 'storm', 'girl', 'tangerine', 'magenta'];
+			var rand = wordArray[Math.floor(Math.random() * wordArray.length)];
+
+			var wordArrayTwo = ['poison', 'prison', 'or', 'sadness', 'immaculate', 'sensational', 'heartbeat', 'a', 'boy', 'periwinkle'];
+			var randTwo = wordArrayTwo[Math.floor(Math.random() * wordArrayTwo.length)];
+
+			var wordArrayThree = ['moon', 'luminosity', 'soft', 'gentle', 'caress', 'river', 'snake', 'bite', 'watch', 'lovers', 'night'];
+			var randThree = wordArrayThree[Math.floor(Math.random() * wordArrayThree.length)];
+
+			var wordArrayFour = ['touch', 'melody', 'kiss', 'by', 'heart', 'calm', 'see', 'mouth', 'skin', 'beneath', 'flesh'];
+			var randFour = wordArrayFour[Math.floor(Math.random() * wordArrayFour.length)];
+
+			var wordArrayFive = ['stars', 'twinkle', 'comet', 'the', 'slow', 'eternity', 'shadows', 'over', 'warmth', 'under'];
+			var randFive = wordArrayFive[Math.floor(Math.random() * wordArrayFive.length)];
+
+			for (var a = 0; a < 2; a++) {
+
+				var words = Math.random()*1;
+
+				if (words < 0.2) {
+					console.log(rand + " " + randTwo);
+	 			}
+				else if (words > 0.2 && words < 0.4) {
+					console.log(randTwo + " " + randThree);
+				}
+				else if (words > 0.4 && words < 0.6) {
+					console.log(randThree + " " + randFour);
+				}
+				else if (words > 0.6 && words < 0.8) {
+					console.log(randFour + " " + randFive);
+				}
+				else if (words > 0.8 && words < 1.0) {
+					console.log(randFive + " " + rand);
+				}
+			}
+
+			console.log(write);
+		}, poetTimer);
+		poetTimer += 150;
+	}
+
+
+	</script>
+</html>
