@@ -4,42 +4,226 @@
 		<meta charset="UTF-8">
 		<title>Console Pattern</title>
 		<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="console.image.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+		<style>
+			body {
+				background-color: black;
+				width: 1400px;
+			}
+
+			#all {
+				width: 800px;
+			}
+
+			.circle {
+				background-color: white;
+				width: 15px;
+				height: 15px;
+				border-radius: 100%;
+				display: inline-block;
+				margin-left: 3px;
+				margin-right: 3px;
+				margin-bottom: 3px;
+				float: left;
+			}
+
+			.circle:hover {
+				width: 25px;
+				height: 25px;
+				background-color: red;
+			}
+
+			.circle-one {
+				background-color: white;
+				width: 35px;
+				height: 35px;
+				border-radius: 100%;
+				display: inline-block;
+				margin-left: 3px;
+				margin-right: 3px;
+				margin-bottom: 3px;
+				float: left;
+			}
+
+			.circle-one:hover {
+				width: 45px;
+				height: 45px;
+				background-color: blue;
+			}
+
+			.circle-two {
+				background-color: white;
+				width: 45px;
+				height: 45px;
+				border-radius: 100%;
+				display: inline-block;
+				margin-left: 3px;
+				margin-right: 3px;
+				margin-bottom: 3px;
+				float: left;
+			}
+
+			.circle-two:hover {
+				width: 55px;
+				height: 55px;
+				background-color: #32CD32;
+			}
+
+			.circle-three {
+				background-color: white;
+				width: 25px;
+				height: 25px;
+				border-radius: 100%;
+				display: inline-block;
+				margin-left: 3px;
+				margin-right: 3px;
+				margin-bottom: 3px;
+				float: left;
+			}
+
+			.circle-three:hover {
+				width: 35px;
+				height: 35px;
+				background-color: yellow;
+			}
+
+			p {
+				font-family: 'VT323', monospace;
+				color: white;
+				font-size: 90px;
+				width: 550px;
+				margin-top: 250px;
+				margin-left: 850px;
+				position: fixed;
+				float: right;
+				animation: pulse 1.5s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes pulse {
+				0% {
+					color: yellow;
+				}
+
+				33% {
+					color: #32CD32;
+				}
+
+				66% {
+					color: #0000FF;
+				}
+
+				100% {
+					color: #FF0000;
+				}
+
+			}
+		</style>
 	</head>
+
 	<body>
+		<div id="all"></div>
+		<p> please inspect & open console</p>
 	</body>
 
 	<script>
+
+	$(document).ready(function(){
+		
+         var htmlTimer = 0;
+
+	for (var x = 0; x < 75; x++){
+
+		setTimeout(function(){
+
+			for (var y = 0; y < 1; y++) {
+				$('#all').append("<div class='circle'></div>");
+			}	
+
+		}, htmlTimer);
+		htmlTimer += 40;
+	}
+
+	var htmlOneTimer = 0;
+
+	for (var r = 0; r < 85; r++){
+
+		setTimeout(function(){
+
+			for (var z = 0; z < 1; z++) {
+				$('#all').append("<div class='circle-one'></div>");
+			}	
+
+		}, htmlOneTimer);
+		htmlOneTimer += 20;
+	}
+
+	var htmlTwoTimer = 0;
+
+	for (var s = 0; s < 75; s++){
+
+		setTimeout(function(){
+
+			for (var t = 0; t < 1; t++) {
+				$('#all').append("<div class='circle-two'></div>");
+			}	
+
+		}, htmlTwoTimer);
+		htmlTwoTimer += 40;
+	}
+		var htmlThreeTimer = 0;
+
+	for (var p = 0; p < 75; p++){
+
+		setTimeout(function(){
+
+			for (var m = 0; m < 1; m++) {
+				$('#all').append("<div class='circle-three'></div>");
+			}	
+
+		}, htmlThreeTimer);
+		htmlThreeTimer += 40;
+	}
+
+
+	
 	var arrowTimer = 0;
 
-	for (var i = 0; i < 50; i++){
+	for (var i = 0; i < 200; i++){
 
 		setTimeout(function(){
 
 			var write = "";
 
-			for (var a = 0; a < 40; a++) {
+			for (var a = 0; a < 70; a++) {
 
 				var arrow = Math.random()*1;
 
-				if (arrow < 0.33) {
-					write += " → ";
+				if (arrow < 0.25) {
+					write += " • ";
 				}
-				else if (arrow > 0.33 && arrow < 0.66) {
-					write += " ← ";
+
+				else if (arrow > 0.26 && arrow < 0.50) {
+					write += " . ";
 				}
-				else if (arrow > 0.66 && arrow < 0.99) {
-					write += " ↓ ";
+				else if (arrow > 0.51 && arrow < 0.75) {
+					write += " · ";
 				}
-				else if (arrow >= 0.99 && arrow < 1.00) {
-					write += "end";
+				else if (arrow > 0.76 && arrow < 0.98){
+					write += " ● ";
+				}
+				else if (arrow > 0.99 && arrow < 1.00){
+					write += " ⬤ ";
 				}
 			}
 
 			console.log(write);
 		}, arrowTimer);
-		arrowTimer += 150;
+		arrowTimer += 90;
 	}
 
-
+	});
 	</script>
 </html>
