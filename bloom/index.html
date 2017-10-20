@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<title>bloom</title>
+		<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<div id="grandparent">
+			<div id="parent">
+				<div class="stem hov-fast"></div>
+				<div class="stem chick-slow"></div>
+				<div class="stem hov-slow"></div>
+				<div class="stem chick-fast"></div>
+				<div class="stem scro scro-fast"></div>
+			</div>
+		</div>
+	</body>
+
+
+	<script>
+		$(document).ready(function(){
+
+			$('.chick-slow').click(function() {
+				console.log('click');
+				$(this).animate({ "margin-top": "-=10px" }, "slow" );
+			});
+
+			$('.chick-fast').click(function() {
+				console.log('click');
+				$(this).animate({ "margin-top": "-=5px" }, "fast" );
+			});
+
+
+			$('.hov-slow').mouseover(function() {
+				console.log('hover');
+				$(this).animate({ "margin-top": "-=10px" }, "slow");
+			});
+
+
+			$('.hov-fast').mouseover(function() {
+				console.log('hover');
+				$(this).animate({ "margin-top": "-=5px" }, "fast");
+			});
+
+
+			$(window).scroll(function() {
+				console.log('scroll');
+				$('.scro-fast').animate({ "margin-top": "-=5px" }, "fast");
+			});
+
+		});
+	</script>
+
+</html>

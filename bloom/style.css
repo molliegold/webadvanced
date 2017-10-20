@@ -1,0 +1,45 @@
+body {
+	background-color: #D1EDFB;
+	height: 710px;
+	outline: 1px solid black;
+	overflow: hidden;
+}
+#grandparent {
+	position: relative;
+}
+
+#parent {
+	overflow: hidden;
+}
+
+.stem {
+	width: 40px;
+	height: 150px;
+	position: absolute;
+	margin-top: 690px;
+}
+
+.hov-fast {
+	background-color: red;
+	margin-left: 30px;
+}
+
+.hov-slow {
+	background-color: green;
+	margin-left: 170px;
+}
+
+.chick-slow {
+	background-color: yellow;
+	margin-left: 100px;
+}
+
+.chick-fast {
+	background-color: blue;
+	margin-left: 250px;
+}
+
+.scro-fast {
+	background-color: purple;
+	margin-left: 330px;
+}
