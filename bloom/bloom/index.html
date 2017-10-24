@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<title>stems</title>
+		<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<!--container div-->
+		<div id="parent">
+			<!--these are going to be the stems of flowers later on. each "grow" based on hover, click, or scroll--> 
+			<div class="stem hov-fast"></div>
+			<div class="stem hov-slow"></div>
+			<div class="stem click-fast"></div>
+			<div class="stem click-slow"></div>
+			<div class="stem scroll-fast"></div>
+			<div class="stem scroll-slow"></div>
+		</div>
+	</body>
+
+
+	<script>
+		$(document).ready(function(){
+			//on hover
+			$('.hov-fast').mouseover(function() {
+				console.log('hover');
+				$(this).animate({ height: "+=10px", marginTop: "-=10px" }, "fast");
+			});
+
+			$('.hov-slow').mouseover(function() {
+				console.log('hover');
+				$(this).animate({ height: "+=10px", marginTop: "-=10px" }, "slow");
+			});
+
+			//on click
+			$('.click-slow').click(function() {
+				console.log('click');
+				$(this).animate({ height: "+=10px", marginTop: "-=10px" }, "fast" );
+			});
+
+			$('.click-fast').click(function() {
+				console.log('click');
+				$(this).animate({ height: "+=10px", marginTop: "-=10px" }, "fast" );
+			});
+
+			//on scroll
+			$(window).scroll(function() {
+				console.log('scroll');
+				$('.scroll-fast').animate({ height: "+=10px", marginTop: "-=10px" }, "fast");
+			});
+
+			$(window).scroll(function() {
+				console.log('scroll');
+				$('.scroll-slow').animate({ height: "+=10px", marginTop: "-=10px" }, "slow");
+			});
+
+		});
+	</script>
+
+</html>

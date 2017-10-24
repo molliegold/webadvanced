@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<title>path</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+		<!--CDN link for  TweenMax-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+	</head>
+
+	<body>
+		<!--container div-->
+		<div id="container">
+			<!-- LETTER : S (starting from top right going in 's' shape)-->
+			<div class="move s-one"></div>
+			<div class="move s-two"></div>
+			<div class="move s-three"></div>
+			<div class="move s-four"></div>
+			<div class="move s-five"></div>
+			<div class="move s-six"></div>
+			<div class="move s-seven"></div>
+		</div>
+		
+	</body>
+
+
+	<script>
+		$(document).ready(function(){
+			//on hover effects
+
+			//playing with border radius shift
+			$(".move").mouseover(function(){
+				TweenMax.to(".s-one", 1, {left: "+=10px", top: "+=20px", borderRadius: "50% 50%"});
+			});
+
+			//playing with skew
+			$(".move").mouseover(function(){
+				TweenMax.to(".s-two", 2, {left: "+=15px", top: "+=25px", skewX: "+=20deg"});
+			});
+
+			//playing with rotation
+			$(".move").mouseover(function(){
+				TweenMax.to(".s-three", 1.5, {left: "-=5px", top: "+=25px", rotation: "+=40"});
+			});
+
+			$(".move").mouseover(function(){
+				TweenMax.to(".s-four", 2, {left: "-=10px", top: "+=30px"});
+			});
+
+			$(".move").mouseover(function(){
+				TweenMax.to(".s-five", 1, {left: "-=15px", top: "+=20px"});
+			});
+
+			$(".move").mouseover(function(){
+				TweenMax.to(".s-six", 0.5, {left: "+=5px", top: "+=10px"});
+			});
+
+			$(".move").mouseover(function(){
+				TweenMax.to(".s-seven", 0.5, {left: "-=10px", top: "+=25px"});
+			});
+
+		});
+	</script>
+
+</html> 
