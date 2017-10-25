@@ -20,6 +20,27 @@
 			<div class="move s-five"></div>
 			<div class="move s-six"></div>
 			<div class="move s-seven"></div>
+
+			<!-- LETTER : E (starting from top right going in 'e' shape)-->
+			<div class="move e-one"></div>
+			<div class="move e-two"></div>
+			<div class="move e-three"></div>
+			<div class="move e-four"></div>
+
+			<!-- LETTER : E (starting from top right going in 'e' shape)-->
+			<div class="move e-two-one"></div>
+			<div class="move e-two-two"></div>
+			<div class="move e-two-three"></div>
+			<div class="move e-two-four"></div>
+
+			<!-- LETTER : D (starting from top left curve going clockwise)-->
+			<div class="move d-one"></div>
+			<div class="move d-two"></div>
+			<div class="move d-three"></div>
+			<div class="move d-four"></div>
+			<div class="move d-five"></div>
+			<div class="move d-six"></div>
+
 		</div>
 		
 	</body>
@@ -29,6 +50,7 @@
 		$(document).ready(function(){
 			//on hover effects
 
+///////////////////LETTER S
 			//playing with border radius shift
 			$(".move").mouseover(function(){
 				TweenMax.to(".s-one", 1, {left: "+=10px", top: "+=20px", borderRadius: "50% 50%"});
@@ -36,7 +58,7 @@
 
 			//playing with skew
 			$(".move").mouseover(function(){
-				TweenMax.to(".s-two", 2, {left: "+=15px", top: "+=25px", skewX: "+=20deg"});
+				TweenMax.to(".s-two", 2, {left: "+=15px", top: "+=20px", skewX: "+=20deg"});
 			});
 
 			//playing with rotation
@@ -45,7 +67,7 @@
 			});
 
 			$(".move").mouseover(function(){
-				TweenMax.to(".s-four", 2, {left: "-=10px", top: "+=30px"});
+				TweenMax.to(".s-four", 2, {left: "-=10px", top: "+=15px"});
 			});
 
 			$(".move").mouseover(function(){
@@ -57,7 +79,75 @@
 			});
 
 			$(".move").mouseover(function(){
-				TweenMax.to(".s-seven", 0.5, {left: "-=10px", top: "+=25px"});
+				TweenMax.to(".s-seven", 0.5, {left: "-=10px", top: "+=15px"});
+			});
+
+///////////////////LETTER E
+			//playing with border radius shift
+			$(".move").mouseover(function(){
+				TweenMax.to(".e-one", 0.5, {left: "+=5px", top: "+=15px", rotation: "+=30"});
+			});
+
+			//playing with skew
+			$(".move").mouseover(function(){
+				TweenMax.to(".e-two", 1, {left: "-=15px", top: "+=25px", skewX: "+=10deg"});
+			});
+
+			//playing with rotation
+			$(".move").mouseover(function(){
+				TweenMax.to(".e-three", 2, {left: "-=5px", top: "+=25px", borderRadius: "50% 50%"});
+			});
+
+			$(".move").mouseover(function(){
+				TweenMax.to(".e-four", 1, {left: "+=10px", top: "+=30px"});
+			});
+
+///////////////////LETTER E
+			//playing with border radius shift
+			$(".move").mouseover(function(){
+				TweenMax.to(".e-two-one", 2, {left: "-=20px", top: "+=15px", rotation: "+=10"});
+			});
+
+			//playing with skew
+			$(".move").mouseover(function(){
+				TweenMax.to(".e-two-two", 1.5, {left: "+=10px", top: "+=10px", skewX: "+=50deg"});
+			});
+
+			//playing with rotation
+			$(".move").mouseover(function(){
+				TweenMax.to(".e-two-three", 0.5, {left: "-=15px", top: "+=20px", borderRadius: "50% 50%"});
+			});
+
+			$(".move").mouseover(function(){
+				TweenMax.to(".e-two-four", 1, {left: "+=5px", top: "+=15px"});
+			});
+
+///////////////////LETTER D
+			//playing with border radius shift
+			$(".move").mouseover(function(){
+				TweenMax.to(".d-one", 1.5, {left: "+=15px", top: "+=20px", rotation: "+=50"});
+			});
+
+			//playing with skew
+			$(".move").mouseover(function(){
+				TweenMax.to(".d-two", 1.5, {left: "+=20px", top: "+=15px", borderRadius: "50% 50%"});
+			});
+
+			//playing with rotation
+			$(".move").mouseover(function(){
+				TweenMax.to(".d-three", 1, {left: "+=10px", top: "+=10px", skewX: "+=20deg"});
+			});
+
+			$(".move").mouseover(function(){
+				TweenMax.to(".d-four", 2, {left: "+=5px", top: "+=15px"});
+			});
+
+			$(".move").mouseover(function(){
+				TweenMax.to(".d-five", 1, {left: "+=15px", top: "+=20px", borderRadius: "50% 50%"});
+			});
+
+			$(".move").mouseover(function(){
+				TweenMax.to(".d-six", 2, {left: "+=10px", top: "+=10px"});
 			});
 
 		});

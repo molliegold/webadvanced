@@ -65,9 +65,11 @@ body {
 	position: absolute;
 	background-color: black;
 	height: 20px;
+	max
 }
 
-/*top right */
+/*********************LETTER S*******************/
+/*top right :s*/
 .s-one {
 	/*background-color: blue;*/
 	width: 20px;
@@ -76,7 +78,7 @@ body {
 
 }
 
-/*top middle */
+/*top middle :s*/
 .s-two {
 	/*background-color: red;*/
 	width: 60px;
@@ -84,7 +86,7 @@ body {
 	margin-top: 100px;
 }
 
-/*top left */
+/*top left :s*/
 .s-three {
 	/*background-color: green;*/
 	width: 20px;
@@ -95,7 +97,7 @@ body {
 	transform: rotate(50deg);
 }
 
-/*middle */
+/*middle :s*/
 .s-four {
 	/*background-color: yellow;*/
 	width: 140px;
@@ -106,7 +108,7 @@ body {
 	transform: rotate(40deg);
 }
 
-/*bottom right */
+/*bottom right :s*/
 .s-five {
 	/*background-color: purple;*/
 	width: 40px;
@@ -117,7 +119,7 @@ body {
 	transform: rotate(130deg);
 }
 
-/*bottom middle */
+/*bottom middle :s*/
 .s-six {
 	/*background-color: pink;*/
 	width: 60px;
@@ -125,10 +127,141 @@ body {
 	margin-top: 260px;
 }
 
-/*bottom left */
+/*bottom left :s*/
 .s-seven {
 	/*background-color: pink;*/
 	width: 20px;
 	left: 320px;
 	margin-top: 240px;
+}
+
+/*******************LETTER E********************/
+/*top :e*/
+.e-one {
+	/*background-color: purple;*/
+	width: 90px;
+	left: 500px;
+	margin-top: 100px;
+}
+
+/*side :e*/
+.e-two {
+	/*background-color: red;*/
+	width: 20px;
+	height: 140px;
+	left: 500px;
+	margin-top: 120px;
+}
+
+/*middle :e*/
+.e-three {
+	/*background-color: green;*/
+	width: 40px;
+	left: 520px;
+	margin-top: 180px;
+	-ms-transform: rotate(150deg);
+	-webkit-transform: rotate(150deg);
+	transform: rotate(150deg);
+}
+
+/*bottom :e*/
+.e-four {
+	/*background-color: blue;*/
+	width: 90px;
+	left: 500px;
+	margin-top: 260px;
+}
+
+/*******************LETTER E********************/
+/*top :e*/
+.e-two-one {
+	/*background-color: purple;*/
+	width: 90px;
+	left: 650px;
+	margin-top: 100px;
+}
+
+/*side :e*/
+.e-two-two {
+	/*background-color: red;*/
+	width: 20px;
+	height: 140px;
+	left: 650px;
+	margin-top: 120px;
+}
+
+/*middle :e*/
+.e-two-three {
+	/*background-color: green;*/
+	width: 40px;
+	left: 670px;
+	margin-top: 180px;
+	-ms-transform: rotate(150deg);
+	-webkit-transform: rotate(150deg);
+	transform: rotate(150deg);
+}
+
+/*bottom :e*/
+.e-two-four {
+	/*background-color: blue;*/
+	width: 90px;
+	left: 650px;
+	margin-top: 260px;
+}
+
+/*******************LETTER D********************/
+/*top left :d*/
+.d-one {
+	/*background-color: purple;*/
+	width: 40px;
+	left: 830px;
+	margin-top: 100px;
+}
+
+/*top right :d*/
+.d-two {
+	/*background-color: red;*/
+	width: 30px;
+	left: 875px;
+	margin-top: 110px;
+	-ms-transform: rotate(40deg);
+	-webkit-transform: rotate(40deg);
+	transform: rotate(40deg);
+}
+
+/*right middle :d*/
+.d-three {
+	/*background-color: green;*/
+	width: 20px;
+	height: 95px;
+	left: 900px;
+	margin-top: 140px;
+}
+
+/*bottom right :d*/
+.d-four {
+	/*background-color: pink;*/
+	width: 30px;
+	left: 875px;
+	margin-top: 245px;
+	-ms-transform: rotate(130deg);
+	-webkit-transform: rotate(130deg);
+	transform: rotate(130deg);
+}
+
+/*bottom left :d*/
+.d-five {
+	/*background-color: yellow;*/
+	width: 40px;
+	left: 830px;
+	margin-top: 260px;
+}
+
+/*left middle :d*/
+.d-six {
+	/*background-color: blue;*/
+	width: 20px;
+	height: 180px;
+	left: 810px;
+	margin-top: 100px;
 }
