@@ -1,45 +1,134 @@
 body {
 	background-color: #D1EDFB;
 	height: 710px;
-	outline: 1px solid black;
-	overflow: hidden;
 }
-#grandparent {
+
+/*styles for stems*/
+
+/*container div*/
+#parent {
 	position: relative;
 }
 
-#parent {
-	overflow: hidden;
-}
-
+/*placeholder for stems*/
 .stem {
 	width: 40px;
-	height: 150px;
+	height: 10px;
 	position: absolute;
-	margin-top: 690px;
+	margin-top: 700px;
 }
 
+/*on hover*/
 .hov-fast {
 	background-color: red;
 	margin-left: 30px;
 }
 
 .hov-slow {
-	background-color: green;
-	margin-left: 170px;
-}
-
-.chick-slow {
 	background-color: yellow;
 	margin-left: 100px;
 }
 
-.chick-fast {
-	background-color: blue;
-	margin-left: 250px;
+/*on click*/
+.click-fast {
+	background-color: green;
+	margin-left: 170px;
 }
 
-.scro-fast {
+.click-slow {
+	background-color: blue;
+	margin-left: 240px;
+}
+
+/*on scroll*/
+.scroll-fast {
 	background-color: purple;
-	margin-left: 330px;
+	margin-left: 310px;
+}
+
+.scroll-slow {
+	background-color: pink;
+	margin-left: 380px;
+}
+
+/*************************************************************/
+
+/*styles for word animation*/
+/*container div*/
+#container {
+	width: 1300px;
+	height: 700px;
+}
+
+/*basic div styles*/
+.move {
+	position: absolute;
+	background-color: black;
+	height: 20px;
+}
+
+/*top right */
+.s-one {
+	/*background-color: blue;*/
+	width: 20px;
+	left: 400px;
+	margin-top: 120px;
+
+}
+
+/*top middle */
+.s-two {
+	/*background-color: red;*/
+	width: 60px;
+	left: 340px;
+	margin-top: 100px;
+}
+
+/*top left */
+.s-three {
+	/*background-color: green;*/
+	width: 20px;
+	left: 315px;
+	margin-top: 110px;
+	-ms-transform: rotate(50deg);
+	-webkit-transform: rotate(50deg);
+	transform: rotate(50deg);
+}
+
+/*middle */
+.s-four {
+	/*background-color: yellow;*/
+	width: 140px;
+	left: 295px;
+	margin-top: 180px;
+	-ms-transform: rotate(50deg);
+	-webkit-transform: rotate(50deg);
+	transform: rotate(40deg);
+}
+
+/*bottom right */
+.s-five {
+	/*background-color: purple;*/
+	width: 40px;
+	left: 399px;
+	margin-top: 239px;
+	-ms-transform: rotate(130deg);
+	-webkit-transform: rotate(130deg);
+	transform: rotate(130deg);
+}
+
+/*bottom middle */
+.s-six {
+	/*background-color: pink;*/
+	width: 60px;
+	left: 340px;
+	margin-top: 260px;
+}
+
+/*bottom left */
+.s-seven {
+	/*background-color: pink;*/
+	width: 20px;
+	left: 320px;
+	margin-top: 240px;
 }
