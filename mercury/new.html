@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Masonry Yes</title>
+		<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+		<style>
+		/*no margins*/
+		* {
+			margin: 0;
+		}
+		/*import font*/
+		@font-face {
+		    font-family: north;
+		    src: url(font/north.otf);
+		}
+		/*no overflow*/
+		body {
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		}
+		/*top nav bar*/
+		.nav {
+			background-color: #35465c;
+			width: 100%;
+			height: 50px;
+			margin: 0;
+		}
+		/*top nav font styles*/
+		p {
+			color: white;
+			font-family: 'north', sans-serif;
+			font-size: 20px;
+			text-align: center;
+			padding-top: 10px;
+		}
+		a {
+			position: absolute;
+			font-family: "north";
+			color: white;
+			text-decoration: none;
+			padding: 10px 0 0 10px;
+		}
+		/*semi-opaque overlay*/
+		.overlay{
+			z-index: 1;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			background-color: rgba(195,195,195, 0.4);
+		}
+		/*overlay font --yes or no*/
+		h1 {
+			font-family: 'north', sans-serif;
+			text-align: center;
+			font-size: 200px;
+			color: white;
+			padding-top: 20vh;
+		}
+		/*masonry.js grid width*/
+		.grid {
+			width: 100%;
+		}
+		/*width of each grid item*/
+		.grid-item {
+			width: 195px;
+		}
+
+		img {
+			width: 195px;
+			padding: 2px 5px 2px 5px;
+		}
+		/*if yes or no -- show or hide*/
+		.yas{
+			visibility: hidden;
+			width: 100%;
+			position: absolute;
+		}
+
+		.nah {
+			visibility: hidden;
+			width: 100%;
+			position: absolute;
+		}
+		</style>
+	</head>
+	<body>
+		<!-- top bar / nav elements -->
+		<div class="nav">
+			<a href="index.html">link</a>
+			<p>is mercury in retrograde?</p>
+		</div>
+
+		<!-- if yes elements -->
+		<div class="yas">
+			<div class="overlay">
+				<h1>YES</h1>
+			</div>
+
+			<div class="grid">
+			  <div class="grid-item"><img src="true/true19.gif"></div>
+			  <div class="grid-item"><img src="true/true2.gif"></div>
+			  <div class="grid-item"><img src="true/true3.gif"></div>
+			  <div class="grid-item"><img src="true/true4.gif"></div>
+			  <div class="grid-item"><img src="true/true5.gif"></div>
+			  <div class="grid-item"><img src="true/true6.gif"></div>
+			  <div class="grid-item"><img src="true/true7.gif"></div>
+			  <div class="grid-item"><img src="true/true8.gif"></div>
+			  <div class="grid-item"><img src="true/true9.gif"></div>
+			  <div class="grid-item"><img src="true/true10.gif"></div>
+			  <div class="grid-item"><img src="true/true11.gif"></div>
+			  <div class="grid-item"><img src="true/true12.gif"></div>
+			  <div class="grid-item"><img src="true/true13.gif"></div>
+			  <div class="grid-item"><img src="true/true14.gif"></div>
+			  <div class="grid-item"><img src="true/true15.gif"></div>
+			  <div class="grid-item"><img src="true/true16.gif"></div>
+			  <div class="grid-item"><img src="true/true17.gif"></div>
+			  <div class="grid-item"><img src="true/true18.gif"></div>
+			  <div class="grid-item"><img src="true/true1.gif"></div>
+			  <div class="grid-item"><img src="true/true20.gif"></div>
+	  		  <div class="grid-item"><img src="true/true22.gif"></div>
+			  <div class="grid-item"><img src="true/true21.gif"></div>
+			  <div class="grid-item"><img src="true/true23.gif"></div>
+			  <div class="grid-item"><img src="true/true24.gif"></div>
+			  <div class="grid-item"><img src="true/true35.gif"></div>
+			  <div class="grid-item"><img src="true/true26.gif"></div>
+			  <div class="grid-item"><img src="true/true27.gif"></div>
+			  <div class="grid-item"><img src="true/true28.gif"></div>
+			  <div class="grid-item"><img src="true/true29.gif"></div>
+			  <div class="grid-item"><img src="true/true30.gif"></div>
+			  <div class="grid-item"><img src="true/true32.gif"></div>
+			  <div class="grid-item"><img src="true/true33.gif"></div>
+			  <div class="grid-item"><img src="true/true34.gif"></div>
+			</div>
+		</div>
+
+		<!-- if no elements -->
+		<div class="nah">
+			<div class="overlay">
+				<h1>NO</h1>
+			</div>
+
+			<div class="grid">
+			  <div class="grid-item"><img src="false/false19.gif"></div>
+			  <div class="grid-item"><img src="false/false2.gif"></div>
+			  <div class="grid-item"><img src="false/false3.gif"></div>
+			  <div class="grid-item"><img src="false/false4.gif"></div>
+			  <div class="grid-item"><img src="false/false5.gif"></div>
+			  <div class="grid-item"><img src="false/false6.gif"></div>
+			  <div class="grid-item"><img src="false/false7.gif"></div>
+			  <div class="grid-item"><img src="false/false8.gif"></div>
+			  <div class="grid-item"><img src="false/false9.gif"></div>
+			  <div class="grid-item"><img src="false/false10.gif"></div>
+			  <div class="grid-item"><img src="false/false11.gif"></div>
+			  <div class="grid-item"><img src="false/false12.gif"></div>
+			  <div class="grid-item"><img src="false/false13.gif"></div>
+			  <div class="grid-item"><img src="false/false14.gif"></div>
+			  <div class="grid-item"><img src="false/false15.gif"></div>
+			  <div class="grid-item"><img src="false/false16.gif"></div>
+			  <div class="grid-item"><img src="false/false17.gif"></div>
+			  <div class="grid-item"><img src="false/false18.gif"></div>
+			  <div class="grid-item"><img src="false/false1.gif"></div>
+			  <div class="grid-item"><img src="false/false20.gif"></div>
+	  		  <div class="grid-item"><img src="false/false22.gif"></div>
+			  <div class="grid-item"><img src="false/false21.gif"></div>
+			  <div class="grid-item"><img src="false/false23.gif"></div>
+			  <div class="grid-item"><img src="false/false24.gif"></div>
+			  <div class="grid-item"><img src="false/false35.gif"></div>
+			  <div class="grid-item"><img src="false/false26.gif"></div>
+			  <div class="grid-item"><img src="false/false27.gif"></div>
+			  <div class="grid-item"><img src="false/false28.gif"></div>
+			  <div class="grid-item"><img src="false/false29.gif"></div>
+			  <div class="grid-item"><img src="false/false30.gif"></div>
+			  <div class="grid-item"><img src="false/false32.gif"></div>
+			  <div class="grid-item"><img src="false/false33.gif"></div>
+			  <div class="grid-item"><img src="false/false34.gif"></div>
+			</div>
+		</div>
+
+	</body>
+
+	<script>
+	$(document).ready(function(){
+		$.get("https://mercuryretrogradeapi.com", function( data ){
+	    	//if yes - show yes gifs,etc.
+	    	if ({"is_retrograde":true}) {
+	    		$('.yas').css('visibility','visible');
+	    		console.log("yes");
+	    	}
+	    	//if no - show no gifs, etc.
+	    	// if ({"is_retrograde":false}) {
+	    	// 	$('.nah').css('visibility','visible');
+	    	// 	console.log("no");
+	    	// }
+	    });
+
+		//grid
+		$('.grid').masonry({
+		  // options
+		  itemSelector: '.grid-item',
+		  columnWidth: 200
+		});
+	});
+
+	</script>
+
+</html>

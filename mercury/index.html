@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>About</title>
+		<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/fullpage/jquery.fullPage.css" />
+		<script type="text/javascript" src="js/fullpage/jquery.fullPage.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300" rel="stylesheet">
+		<style>
+			/*no margins*/
+			* {
+				margin: 0;
+			}
+			/*import fonts*/
+			@font-face {
+				font-family: 'alcu';
+				src: url(font/alcubierre.otf);
+			}
+
+			@font-face {
+			    font-family: north;
+			    src: url(font/north.otf);
+			}
+			/*bottom bar background color*/
+			.slideOne, .slideTwo, .slideThree {
+				position: absolute;
+				background-color: #12252b;
+				width: 100%;
+				height: 30px;
+				bottom: 0;
+			}
+
+			.slideTwo {
+				background-color: #093248;
+			}
+
+			.slideThree {
+				background-color: #35465c;
+			}
+			/*bottom bar font styles*/
+			h1 {
+				color: white;
+				font-family: 'Alegreya Sans', Arial, sans-serif;
+				font-size: 14px;
+				font-weight: 300;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				text-align: center;
+				padding-top: 5px;
+			}
+			/*fullpage.js navigation styles -- dots*/
+			#fp-nav ul li a span, 
+			.fp-slidesNav ul li a span {
+			    background: white;
+			    width: 12px;
+			    height: 12px;
+			    margin: 4px 0 0 -4px;
+			}
+			      
+			#fp-nav ul li a.active span, 
+			.fp-slidesNav ul li a.active span, 
+			#fp-nav ul li:hover a.active span, 
+			.fp-slidesNav ul li:hover a.active span {
+			    width: 20px;
+			    height: 20px;
+			    margin: 0px 0 0 -8px;
+			    background: transparent;
+			    box-sizing: border-box;
+			    border: 1px solid white;
+			}
+			/*vertical sections background image/colors*/
+			.section-one {
+				background-image: url('img/space.jpg');
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: 100%;
+			}
+			.section-two {
+				background-color: #12252b;
+			}
+
+			.section-three {
+				background-color: #093248;
+			}
+
+			.section-four {
+				background-color: #35465c;
+			}
+			/*paragraph styles*/
+			.section-two-p {
+				width: 40%;
+				margin: auto;
+				color: white;
+				font-family: 'Alegreya Sans', Arial, sans-serif;
+				font-size: 16px;
+				font-weight: 300;
+				letter-spacing: 1px;
+				line-height: 22px;
+				text-transform: uppercase;
+				padding-top: 5px;
+			}
+			/*hyperlink styles*/
+			.link {
+				text-decoration: none;
+				color: white;
+				border-bottom: 1px solid white;
+				text-align: center;
+				font-family: "north", sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<!--container for full page .js-->
+		<div id="fullpage">
+			<!--section one - homepage -->
+			<div class="section section-one" data-anchor="first-page">
+				<!--bottom bar -->
+				<div class="slideOne">
+					<h1>what is mercury in retrograde?</h1>
+				</div>
+
+			</div>
+			<!--section two : spans and classes to hide different words/letters-->
+			<div class="section section-two" data-anchor="second-page">
+				<p class="section-two-p">S<span class="letter">e</span>ver<span class="letter">a</span>l t<span class="letter">i</span>mes a y<span class="letter">ea</span>r, <span class="gone">it appears <span class="gone">as</span> if</span> <span class="letter">Me</span>rc<span class="letter">u</span>ry is <span class="gone">going</span> b<span class="letter">a</span>ckwards in th<span class="letter">e</span> night sky. <span class="gone">Because</span> Me<span class="letter">rc</span>ury is t<span class="letter">h</span>e closest pl<span class="letter">a</span>net <span class="gone">to the sun,</span> its orbit is <span class="letter">m</span>uch shorter <span class="gone">than E<span class="letter">a</span>rth’s.</span> Whe<span class="letter">n</span> Mercury pass<span class="letter">e</span>s the Earth, we <span class="letter">e</span>xperi<span class="letter">e</span>nce <span class="gone">this illusion, known as</span> a <strong>retrograde</strong> p<span class="letter">e</span>riod.
+				
+				<br>
+				<br>
+				
+				<span class="letter">O</span>f all pl<span class="letter">a</span>neta<span class="letter">r</span>y asp<span class="letter">ec</span>ts, <span class="gone">this one seems</span> to g<span class="letter">a</span>rner <span class="gone">the most</span> at<span class="letter">te</span>ntion <span class="gone">as</span> th<span class="letter">i</span>s phenomenon <span class="gone">is one of the few that</span> aff<span class="letter">e</span>cts ev<span class="letter"></span>er<span class="letter">yo</span>ne <span class="gone">in a</span> <span class="letter">f</span>air<span class="letter">ly</span> uniform w<span class="letter">a</span>y, and <span class="gone">its</span> effects are <span class="gone">usually</span> pr<span class="letter">et</span>ty obvious.</p>
+
+				<!--bottom bar -->
+				<div class="slideTwo">
+					<h1>why is it important?</h1>
+				</div>
+
+			</div>
+			<!--section three -->
+			<div class="section section-three" data-anchor="third-page">
+
+				<p class="section-two-p section-three-p">When a planet retrogrades, astrologically it is in a resting or sleeping state. So while Mercury naps, the activities that it governs don’t have the benefit of a well-functioning, wide-awake planet to supervise them. These times are associated with confusions, delay, and frustration.
+				<br>
+				<br>
+				According to astrology, Mercury rules communication, travel, contracts, etc.</p>
+
+				<!--bottom bar -->
+				<div class="slideThree">
+					<h1>how does this effect me?</h1>
+				</div>
+			</div>
+			<!--section four : spans to censor/white out words-->
+			<div class="section section-four" data-anchor="fourth-page">
+
+				<p class="section-two-p">Thin<span class="mercury">gs that can</span> be affected while <span class="mercury">Mercury is in</span> retrograde:
+				<br>
+				<br>
+				Miscomm<span class="mercury">unications ar</span>e abound.
+				<br>
+				<span class="mercury">It can</span> be hard to get decisions fro<span class="mercury">m others</span>.
+				<br>
+				Be extra car<span class="mercury">eful when send</span>ing important <span class="mercury">documents</span> and emails.
+				<br>
+				Confusion <span class="mercury">is abundant</span>.
+				<br>
+				<br>
+				<!--link to homepage -->
+				<center><a class="link" href="new.html">Is Mercury in retrograde?</a></center></p>
+
+			</div>
+
+		</div>
+
+	</body>
+
+	<script>
+	$(document).ready(function(){
+		//hover for glitch effect on section one/home page
+		$(".section-one").mouseenter(function(){
+			$(this).css('background-image','url("img/glitch.png")');
+		});
+
+		$(".section-one").mouseleave(function(){
+			$(this).css('background-image','url("img/space.jpg")');
+		});
+
+		//section two : blocking out words/letters via spans
+		$('.letter').css('color','#12252b');
+
+		$('.gone').css('opacity', '0');
+
+		//section three : jumbling words by replacing certain letters with others
+		$('.section-three-p').text( $('.section-three-p').text().replace(/a/g, 'e').replace(/s/g, 'm').replace(/i/g, 'x') );
+
+		//section four : censoring/white out words via span
+		$('.mercury').css('background-color','white');
+		
+		//fullpage.js nav - dots on left side
+		$('#fullpage').fullpage({
+			menu: '#menu',
+			navigation: true,
+			lockAnchors: true,
+			anchors:['first-page', 'second-page', 'third-page', 'fourth-page'],
+			navigationPosition: 'left',
+			showActiveTooltip: true,
+			slidesNavigation: true,
+			slidesNavPosition: 'bottom',
+			});
+
+	});
+
+	</script>
+</html>
