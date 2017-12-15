@@ -11,44 +11,13 @@ body {
 }
 
 /*placeholder for stems*/
-.stem {
-	width: 40px;
+
+.plant{
+	width: 20px;
 	height: 10px;
 	position: absolute;
-	margin-top: 700px;
-}
-
-/*on hover*/
-.hov-fast {
-	background-color: red;
-	margin-left: 30px;
-}
-
-.hov-slow {
-	background-color: yellow;
-	margin-left: 100px;
-}
-
-/*on click*/
-.click-fast {
+	bottom: 0px;
 	background-color: green;
-	margin-left: 170px;
-}
-
-.click-slow {
-	background-color: blue;
-	margin-left: 240px;
-}
-
-/*on scroll*/
-.scroll-fast {
-	background-color: purple;
-	margin-left: 310px;
-}
-
-.scroll-slow {
-	background-color: pink;
-	margin-left: 380px;
 }
 
 /*************************************************************/
@@ -65,16 +34,16 @@ body {
 	position: absolute;
 	background-color: black;
 	height: 20px;
-	max
 }
 
 /*********************LETTER S*******************/
 /*top right :s*/
 .s-one {
 	/*background-color: blue;*/
+	position: absolute;
 	width: 20px;
 	left: 400px;
-	margin-top: 120px;
+	top: 120px;
 
 }
 
@@ -103,8 +72,8 @@ body {
 	width: 140px;
 	left: 295px;
 	margin-top: 180px;
-	-ms-transform: rotate(50deg);
-	-webkit-transform: rotate(50deg);
+	-ms-transform: rotate(40deg);
+	-webkit-transform: rotate(40deg);
 	transform: rotate(40deg);
 }
 
@@ -264,4 +233,23 @@ body {
 	height: 180px;
 	left: 810px;
 	margin-top: 100px;
+}
+
+/************************************************/
+
+.lef-one {
+	width: 50px;
+	height: 20px;
+	border-radius: 100%;
+	background-color: green;
+	position: absolute;
+	left: 0px;
+}
+
+.dandy {
+	width: 100px;
+	height: auto;
+	border-radius: 100%;
+	position: absolute;
+	left: -40px;
 }
