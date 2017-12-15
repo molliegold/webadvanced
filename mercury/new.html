@@ -36,12 +36,11 @@
 			text-align: center;
 			padding-top: 10px;
 		}
-		a {
+		.nav img {
 			position: absolute;
-			font-family: "north";
-			color: white;
-			text-decoration: none;
-			padding: 10px 0 0 10px;
+			width: auto;
+			height: 40px;
+			padding: 5px 0 0 10px;
 		}
 		/*semi-opaque overlay*/
 		.overlay{
@@ -89,7 +88,7 @@
 	<body>
 		<!-- top bar / nav elements -->
 		<div class="nav">
-			<a href="index.html">link</a>
+			<a href="index.html"><img src='img/star1-glitch.gif'></a>
 			<p>is mercury in retrograde?</p>
 		</div>
 
@@ -185,15 +184,17 @@
 	$(document).ready(function(){
 		$.get("https://mercuryretrogradeapi.com", function( data ){
 	    	//if yes - show yes gifs,etc.
-	    	if ({"is_retrograde":true}) {
-	    		$('.yas').css('visibility','visible');
+	    	var retrogradeStatus = data.is_retrograde;
+
+			if(retrogradeStatus === true){
+				$('.yas').css('visibility','visible');
 	    		console.log("yes");
+			}
+			//if no - show no gifs, etc.
+	    	else {
+	    		$('.nah').css('visibility','visible');
+	    		console.log("no");
 	    	}
-	    	//if no - show no gifs, etc.
-	    	// if ({"is_retrograde":false}) {
-	    	// 	$('.nah').css('visibility','visible');
-	    	// 	console.log("no");
-	    	// }
 	    });
 
 		//grid

@@ -104,9 +104,86 @@
 			.link {
 				text-decoration: none;
 				color: white;
-				border-bottom: 1px solid white;
 				text-align: center;
 				font-family: "north", sans-serif;
+				border-bottom: 1px solid white;
+			}
+			/*reset button*/
+			.reset, .reset-two {
+				position: absolute;
+				color: white;
+				font-family: "alcu";
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: 16px;
+				font-weight: 300;
+				margin-top: 45vh;
+				right: 20px;
+				writing-mode: vertical-rl;
+ 				text-orientation: upright;
+			}
+
+			.reset:hover, .reset-two:hover {
+				cursor: pointer;
+			}
+
+			.hide {
+				visibility: hidden;
+			}
+
+			/*cartoon styles*/
+			.cartoon, .glitch {
+				position: absolute;
+				height: auto;
+			}
+			.alien, .alien-glitch {
+				width: 50px;
+				margin: 5vh 0 0 75vw;
+			}
+			.alien2, .alien2-glitch {
+				width: 75px;
+				margin: -22% 0 0 32%;
+			}
+			.moon, .moon-glitch {
+				width: 50px;
+				margin: -24% 0 0 25%;
+			}
+			.ufo, .ufo-glitch {
+				width: 75px;
+				margin: 0 0 0 66vw;
+			}
+			.planet, .planet-glitch {
+				width: 75px;
+				margin: -5% 0 0 75vw;
+			}
+			.planet2, .planet2-glitch {
+				width: 75px;
+				margin: -15% 0 0 22%;
+			}
+			/*section three cartoons*/
+			.star2, .star2-glitch {
+				width: 50px;
+				margin: -15% 0 0 70vw;
+			}
+			.star, .star-glitch {
+				width: 30px;
+				margin: 2vh 0 0 30%;
+			}
+			.star1, .star1-glitch {
+				width: 50px;
+				margin: -10% 0 0 75vw;
+			}
+			.star22, .star22-glitch {
+				width: 50px;
+				margin: -3% 0 0 23%;
+			}
+			.star0, .star0-glitch {
+				width: 30px;
+				margin: -17% 0 0 77vw;
+			}
+			.star11, .star11-glitch {
+				width: 50px;
+				margin: 8vh 0 0 23%;
 			}
 		</style>
 	</head>
@@ -130,6 +207,27 @@
 				
 				<span class="letter">O</span>f all pl<span class="letter">a</span>neta<span class="letter">r</span>y asp<span class="letter">ec</span>ts, <span class="gone">this one seems</span> to g<span class="letter">a</span>rner <span class="gone">the most</span> at<span class="letter">te</span>ntion <span class="gone">as</span> th<span class="letter">i</span>s phenomenon <span class="gone">is one of the few that</span> aff<span class="letter">e</span>cts ev<span class="letter"></span>er<span class="letter">yo</span>ne <span class="gone">in a</span> <span class="letter">f</span>air<span class="letter">ly</span> uniform w<span class="letter">a</span>y, and <span class="gone">its</span> effects are <span class="gone">usually</span> pr<span class="letter">et</span>ty obvious.</p>
 
+				<!--cartoons-->
+				<img class="cartoon alien" src="img/alien2.png">
+				<img class="cartoon alien2" src="img/alien.png">
+				<img class="cartoon moon" src="img/moon.png">
+				<img class="cartoon ufo" src="img/ufo.png">
+				<img class="cartoon planet" src="img/planet.png">
+				<img class="cartoon planet2" src="img/planet.png">
+
+				<!--cartoon glitch gif-->
+				<img class="glitch alien-glitch" src="img/alien-glitch.gif">
+				<img class="glitch alien2-glitch" src="img/alien2-glitch.gif">
+				<img class="glitch moon-glitch" src="img/moon-glitch.gif">
+				<img class="glitch ufo-glitch" src="img/ufo-glitch.gif">
+				<img class="glitch planet-glitch" src="img/planet-glitch.gif">
+				<img class="glitch planet2-glitch" src="img/planet-glitch.gif">
+
+				<!--reset button -->
+				<p class="reset">reset</p>
+				<!--reset button -->
+				<p class="reset-two">reset</p>
+
 				<!--bottom bar -->
 				<div class="slideTwo">
 					<h1>why is it important?</h1>
@@ -143,6 +241,26 @@
 				<br>
 				<br>
 				According to astrology, Mercury rules communication, travel, contracts, etc.</p>
+				<!--cartoons-->
+				<img class="cartoon star2" src="img/star2.png">
+				<img class="cartoon star" src="img/star.png">
+				<img class="cartoon star1" src="img/star1.png">
+				<img class="cartoon star22" src="img/star2.png">
+				<img class="cartoon star0" src="img/star.png">
+				<img class="cartoon star11" src="img/star1.png">
+
+				<!--cartoon glitch gif-->
+				<img class="glitch star2-glitch" src="img/star1-glitch.gif">
+				<img class="glitch star-glitch" src="img/star-glitch.gif">
+				<img class="glitch star1-glitch" src="img/star2-glitch.gif">
+				<img class="glitch star22-glitch" src="img/star1-glitch.gif">
+				<img class="glitch star0-glitch" src="img/star-glitch.gif">
+				<img class="glitch star11-glitch" src="img/star2-glitch.gif">
+
+				<!--reset button -->
+				<p class="reset">reset</p>
+				<!--reset button -->
+				<p class="reset-two">reset</p>
 
 				<!--bottom bar -->
 				<div class="slideThree">
@@ -166,6 +284,11 @@
 				<br>
 				<!--link to homepage -->
 				<center><a class="link" href="new.html">Is Mercury in retrograde?</a></center></p>
+
+				<!--reset button -->
+				<p class="reset">reset</p>
+				<!--reset button -->
+				<p class="reset-two">reset</p>
 
 			</div>
 
@@ -194,6 +317,39 @@
 
 		//section four : censoring/white out words via span
 		$('.mercury').css('background-color','white');
+
+		//reset button
+		$('.reset-two').hide();
+		$('.reset').click(function(){
+			$('.reset').hide();
+			$('.reset-two').show();
+			console.log('back to normal');
+			$(".glitch").hide();
+			//section two : blocking out words/letters via spans
+			$('.letter').css('color','#FFFFFF');
+
+			$('.gone').css('opacity', '1');
+
+			$('.section-three-p').text( $('.section-three-p').text().replace(/e/g, 'a').replace(/m/g, 's').replace(/x/g, 'i') );
+
+			$('.mercury').css('background-color','transparent');
+		});
+
+		//reset-two button
+		$('.reset-two').click(function(){
+			$('.reset').show();
+			$('.reset-two').hide();
+			$(".glitch").show();
+			console.log('back to jumble');
+			//section two : blocking out words/letters via spans
+			$('.letter').css('color','#12252b');
+
+			$('.gone').css('opacity', '0');
+
+			$('.section-three-p').text( $('.section-three-p').text().replace(/a/g, 'e').replace(/s/g, 'm').replace(/i/g, 'm') );
+
+			$('.mercury').css('background-color','white');
+		});
 		
 		//fullpage.js nav - dots on left side
 		$('#fullpage').fullpage({
@@ -206,6 +362,15 @@
 			slidesNavigation: true,
 			slidesNavPosition: 'bottom',
 			});
+
+		//glitch cartoons
+		// $(".glitch").hide();
+		// $(".cartoon").mouseenter(function(){
+		// 	$(".glitch").show();
+		// });
+		// $(".cartoon").mouseleave(function(){
+		// 	$(".glitch").hide();
+		// });
 
 	});
 
