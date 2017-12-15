@@ -5,190 +5,68 @@
 		<title>Console Pattern</title>
 		<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
 		<script type="text/javascript" src="console.image.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet">
 
 		<style>
 			body {
 				background-color: black;
-				width: 1400px;
 			}
 
-			#all {
-				width: 800px;
-			}
-
-			.circle {
-				background-color: white;
-				width: 15px;
-				height: 15px;
-				border-radius: 100%;
-				display: inline-block;
-				margin-left: 3px;
-				margin-right: 3px;
-				margin-bottom: 3px;
-				float: left;
-			}
-
-			.circle:hover {
-				width: 25px;
-				height: 25px;
-				background-color: red;
-			}
-
-			.circle-one {
-				background-color: white;
-				width: 35px;
-				height: 35px;
-				border-radius: 100%;
-				display: inline-block;
-				margin-left: 3px;
-				margin-right: 3px;
-				margin-bottom: 3px;
-				float: left;
-			}
-
-			.circle-one:hover {
-				width: 45px;
-				height: 45px;
-				background-color: blue;
-			}
-
-			.circle-two {
-				background-color: white;
-				width: 45px;
-				height: 45px;
-				border-radius: 100%;
-				display: inline-block;
-				margin-left: 3px;
-				margin-right: 3px;
-				margin-bottom: 3px;
-				float: left;
-			}
-
-			.circle-two:hover {
-				width: 55px;
-				height: 55px;
-				background-color: #32CD32;
-			}
-
-			.circle-three {
-				background-color: white;
-				width: 25px;
-				height: 25px;
-				border-radius: 100%;
-				display: inline-block;
-				margin-left: 3px;
-				margin-right: 3px;
-				margin-bottom: 3px;
-				float: left;
-			}
-
-			.circle-three:hover {
-				width: 35px;
-				height: 35px;
-				background-color: yellow;
-			}
-
-			p {
-				font-family: 'VT323', monospace;
+			p{
+				font-family: 'helvetica',sans-serif;
+				font-size: 16px;
 				color: white;
-				font-size: 90px;
-				width: 550px;
-				margin-top: 250px;
-				margin-left: 850px;
-				position: fixed;
-				float: right;
-				animation: pulse 1.5s;
+				opacity: 0.5;
+				width: 100%;
+				margin-top: 45vh;
+				text-align: center;
+				animation: glow 2s;
 				animation-iteration-count: infinite;
 			}
 
-			@keyframes pulse {
-				0% {
-					color: yellow;
-				}
-
-				33% {
-					color: #32CD32;
-				}
-
-				66% {
-					color: #0000FF;
-				}
-
-				100% {
-					color: #FF0000;
-				}
-
+			@keyframes glow {
+				0% {opacity: 0.2;}
+				50% {opacity: 0.6;}
+				100% {opacity: 0.3;}
+			}
 			}
 		</style>
 	</head>
 
 	<body>
-		<div id="all"></div>
-		<p> please inspect & open console</p>
+		<p>please open console
+			<br>
+			(⌘ option i)</p>
 	</body>
 
 	<script>
 
 	$(document).ready(function(){
-		
-         var htmlTimer = 0;
+		//create function
+		function myFunction(){
 
-	for (var x = 0; x < 75; x++){
+	    	//append to body
+	    	$("<div class='rando'></div>").appendTo('body');
 
-		setTimeout(function(){
+		    	var divsize = ((Math.random()*100) +5).toFixed();
 
-			for (var y = 0; y < 1; y++) {
-				$('#all').append("<div class='circle'></div>");
-			}	
+			    // random position
+			    var posx = (Math.random() * ($(document).width() - divsize)).toFixed();
+			    var posy = (Math.random() * ($(document).height() - divsize)).toFixed();
 
-		}, htmlTimer);
-		htmlTimer += 40;
-	}
+	    	//div styles
+		    $('.rando').css({
+		    	'width':divsize+'px',
+		        'height':divsize+'px',
+		        'background-color': "#FFFFFF",
+		        'border-radius': '100%',
+				'position':'absolute',
+		        'left':posx+'px',
+		        'top':posy+'px'
+		    })
+		}
+		setInterval(myFunction, 300);
 
-	var htmlOneTimer = 0;
-
-	for (var r = 0; r < 85; r++){
-
-		setTimeout(function(){
-
-			for (var z = 0; z < 1; z++) {
-				$('#all').append("<div class='circle-one'></div>");
-			}	
-
-		}, htmlOneTimer);
-		htmlOneTimer += 20;
-	}
-
-	var htmlTwoTimer = 0;
-
-	for (var s = 0; s < 75; s++){
-
-		setTimeout(function(){
-
-			for (var t = 0; t < 1; t++) {
-				$('#all').append("<div class='circle-two'></div>");
-			}	
-
-		}, htmlTwoTimer);
-		htmlTwoTimer += 40;
-	}
-		var htmlThreeTimer = 0;
-
-	for (var p = 0; p < 75; p++){
-
-		setTimeout(function(){
-
-			for (var m = 0; m < 1; m++) {
-				$('#all').append("<div class='circle-three'></div>");
-			}	
-
-		}, htmlThreeTimer);
-		htmlThreeTimer += 40;
-	}
-
-
-	
 	var arrowTimer = 0;
 
 	for (var i = 0; i < 300; i++){
