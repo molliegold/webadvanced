@@ -46,7 +46,7 @@
 				text-decoration: none;
 			}
 
-			#screen1 {
+			.screen {
 				background-color: white;
 				position: absolute;
 				bottom: 5%;
@@ -55,10 +55,10 @@
 				height: 10px;
 			}
 
-			#descrip1 {
+			.description {
 				background-color: white;
 				position: absolute;
-				top: 15%;
+				top: 12%;
 				right: 2%;
 				width: 10px;
 				height: 10px;
@@ -73,6 +73,15 @@
 				padding-top: 25px;
 				padding-left: 20px;
 				padding-right: 20px;
+				text-transform: uppercase;
+			}
+
+			.p2 {
+				padding-top: 40px;
+			}
+
+			.p3, .p4 {
+				padding-top: 15px;
 			}
 
 			video {
@@ -85,56 +94,155 @@
 	</head>
 	<body>
 		<div>
+			<!--index elements-->
 			<h1>MOLLIE GOLD</h1>
 			<h2>WEB ADVANCED - JAVASCRIPT</h2>
 			<a id="one" href="one/aliens.html"><h3>1</h3></a>
 			<a id="two" href="console/animate.html"><h3>2</h3></a>
-			<h3>3</h3>
-			<h3>4</h3>
+			<a id="three" href="bloom/path.html"><h3>3</h3></a>
+			<a id="four" href="mercury/new.html"><h3>4</h3></a>
 		</div>
 
-		<div id="screen1">
+		<!--assignment one-->
+		<div class="screen screen1">
 			<video autoplay loop>
 			<source src="mp4/et.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 			</video>
 		</div>
-		<div id="descrip1"><p>FIND A PIECE OF CONTENT WHOSE COPYRIGHT HAS EXPIRED, OR THAT IS UNDER A CREATIVE COMMONS LICENSE. USING YOUR KNOWLEDGE OF HTML, CSS, AND JAVASCRIPT, DESIGN AND PROGRAM A RE-PUBLISHING / REMIXING / RE-INTERPRETING OF YOUR CONTENT THAT COMMUNICATES YOUR PERSPECTIVE AND WHY YOU FIND THIS PIECE MEANINGFUL.</p></div>
-		
+		<div class="description descrip1"><p class="p p1">FIND A PIECE OF CONTENT WHOSE COPYRIGHT HAS EXPIRED, OR THAT IS UNDER A CREATIVE COMMONS LICENSE. USING YOUR KNOWLEDGE OF HTML, CSS, AND JAVASCRIPT, DESIGN AND PROGRAM A RE-PUBLISHING / REMIXING / RE-INTERPRETING OF YOUR CONTENT THAT COMMUNICATES YOUR PERSPECTIVE AND WHY YOU FIND THIS PIECE MEANINGFUL.</p></div>
+
+		<!--assignment two-->
+		<div class="screen screen2">
+			<video autoplay loop>
+			<source src="mp4/console.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+		</div>
+		<div class="description descrip2"><p class="p p2">Write a JavaScript program which uses loops and if statements to create a pattern in the Chrome Console. Consider how the program might change as it iterates through an array or number of increasing value.</p></div>
+
+		<!--assignment three-->
+		<div class="screen screen3">
+			<video autoplay loop>
+			<source src="mp4/seed.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+		</div>
+		<div class="description descrip3"><p class="p p3">Using your knowledge of Javascript so far, design and develop a single-serve website that utilizes cookies. Using at least one non-standard input (i.e. other than a mouse click), this website should exhibit a narrative loop in which the end-user feels like they are progressing despite engaging in a (endlessly looping) pattern of action.</p></div>
+
+		<!--assignment four-->
+		<div class="screen screen4">
+			<video autoplay loop>
+			<source src="mp4/retro.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+		</div>
+		<div class="description descrip4"><p class="p p4">Make an interactive and living website with at least one API and a secondary source of content (either static or an additional API). Think carefully about how you contextualize and combine your content and what kind of interactions you supply the end-user with. How does the website react to the API over time?</p></div>
+
 	</body>
 
 	<script>
 		$(document).ready(function() {
+			//space: #1
 			$('#one').mouseover(function(){
-				 $('#screen1').animate({
+				 $('.screen1').animate({
 			    	width: ['800px', 'swing'],
 			    	height: ['600px', 'swing']}, { duration: "slow", easing: "easein" });
 				 $('video').css('display','block');
 
-				 $('#descrip1').animate({
+				 $('.descrip1').animate({
 			    	width: ['450px', 'swing'],
 			    	height: ['200px', 'swing']}, { duration: "slow", easing: "easein" });
-				 $('p').css('display','block');
+				 $('.p1').css('display','block');
 			})
 
 			$('#one').mouseout(function(){
-				 $('#screen1').animate({
+				 $('.screen1').animate({
 			    	width: ['10px', 'swing'],
 			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
 				 $('video').css('display','none');
 
-				 $('#descrip1').animate({
+				 $('.descrip1').animate({
 			    	width: ['10px', 'swing'],
 			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
-				 $('p').css('display','none');
+				 $('.p1').css('display','none');
 			})
 
+			//console: #2
+			$('#two').mouseover(function(){
+				 $('.screen2').animate({
+			    	width: ['800px', 'swing'],
+			    	height: ['600px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('video').css('display','block');
+
+				 $('.descrip2').animate({
+			    	width: ['450px', 'swing'],
+			    	height: ['200px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('.p2').css('display','block');
+			})
+
+			$('#two').mouseout(function(){
+				 $('.screen2').animate({
+			    	width: ['10px', 'swing'],
+			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('video').css('display','none');
+
+				 $('.descrip2').animate({
+			    	width: ['10px', 'swing'],
+			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('.p2').css('display','none');
+			})
+
+			//bloom: #3
+			$('#three').mouseover(function(){
+				 $('.screen3').animate({
+			    	width: ['800px', 'swing'],
+			    	height: ['600px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('video').css('display','block');
+
+				 $('.descrip3').animate({
+			    	width: ['450px', 'swing'],
+			    	height: ['200px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('.p3').css('display','block');
+			})
+
+			$('#three').mouseout(function(){
+				 $('.screen3').animate({
+			    	width: ['10px', 'swing'],
+			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('video').css('display','none');
+
+				 $('.descrip3').animate({
+			    	width: ['10px', 'swing'],
+			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('.p3').css('display','none');
+			})
+
+			//final: #4
+			$('#four').mouseover(function(){
+				 $('.screen4').animate({
+			    	width: ['800px', 'swing'],
+			    	height: ['600px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('video').css('display','block');
+
+				 $('.descrip4').animate({
+			    	width: ['450px', 'swing'],
+			    	height: ['200px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('.p4').css('display','block');
+			})
+
+			$('#four').mouseout(function(){
+				 $('.screen4').animate({
+			    	width: ['10px', 'swing'],
+			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('video').css('display','none');
+
+				 $('.descrip4').animate({
+			    	width: ['10px', 'swing'],
+			    	height: ['10px', 'swing']}, { duration: "slow", easing: "easein" });
+				 $('.p4').css('display','none');
+			})
 		});
-
-
-
-
-
 
 	</script>
 </html>
