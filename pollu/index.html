@@ -5,6 +5,8 @@
 		<title>air pollution</title>
 		<link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
 
+		<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+
 		<style>
 			* {
 				margin: 0;
@@ -111,6 +113,23 @@
 				margin-top: 5%;
 			}
 
+			h5 {
+				font-family: 'Karla', sans-serif;
+				font-size: 20px;
+				display: block;
+				width: 100%;
+				text-align: center;
+				color: white;
+			}
+
+			.carShow {
+				opacity: 0;
+			}
+
+			.bikeShow {
+				opacity: 0;
+			}
+
 			#bike {
 				width: auto;
 				height: 200px;
@@ -155,7 +174,9 @@
 			</div>
 
 			<div id="sectionThree">
-				<h2>Find out how much Co2 each mode of transportation produces</h2>
+				<h2>Hover over each to see how they affect air pollution</h2>
+				<h5 class="carShow">Cars emit around 271g/km of Co2 emissions per person. This creates lots of smog in the air which is bad to breathe.</h5>
+				<h5 class="bikeShow">Bikes only emit around 16g/km of Co2 emissions per person. This helps clean up the air we breathe.</h5>
 				<img id="car" src="media/car.png">
 				<img id="lines" src="media/lines.png">
 				<img id="bike" src="media/bike.png">
@@ -168,9 +189,25 @@
 
 	<script type="text/javascript">
 	$(document).ready(function() {
-		// $("#bike").mouseover(function(){
+		$("#bike").mouseover(function(){
+			$("#sectionThree").css("background-color","rgba(0,0,0,0.0)");
+			$(".bikeShow").css("opacity", "1");
+		});
 
-		// };
+		$("#bike").mouseout(function(){
+			$("#sectionThree").css("background-color","rgba(0,0,0,0.5)");
+			$(".bikeShow").css("opacity", "0");
+		});
+
+		$("#car").mouseover(function(){
+			$("#sectionThree").css("background-color","rgba(0,0,0,0.9)");
+			$(".carShow").css("opacity", "1");
+		});
+
+		$("#car").mouseout(function(){
+			$("#sectionThree").css("background-color","rgba(0,0,0,0.5)");
+			$(".carShow").css("opacity", "0");
+		});
 	});
 	</script>
 </html>
